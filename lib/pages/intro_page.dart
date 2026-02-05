@@ -94,6 +94,56 @@ class _IntroPageState extends State<IntroPage> {
     );
   }
 
+  _tryLoad(XFile file) async {
+    await tryDB(file.path);
+    if (mounted) {
+      Navigator.of(
+        context,
+      ).push(MaterialPageRoute(builder: (context) => const MainPage()));
+    }
+  }
+
+  Future<void> _showKoboWarning(XFile file) async {
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Warning: .kobo folder detected.'),
+          content: const SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                Text(
+                  "You seem to be loading the database directly from the .kobo folder in your eReader. This is not advised: if a connection error or some kind of problem damages the file, you could lose all of your content. Please, make a copy of the database file into your computer, and try loading that file instead.",
+                ),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            FilledButton(
+              child: const Text("Go back"),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            FilledButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStatePropertyAll(
+                  ColorScheme.of(context).errorContainer,
+                ),
+              ),
+              child: const Text("Load anyway"),
+              onPressed: () {
+                Navigator.of(context).pop();
+                _tryLoad(file);
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   void initState() {
     super.initState();
@@ -119,13 +169,10 @@ class _IntroPageState extends State<IntroPage> {
                 XFile? file = await openFile();
                 if (file != null) {
                   try {
-                    await tryDB(file.path);
-                    if (context.mounted) {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => const MainPage(),
-                        ),
-                      );
+                    if (file.path.contains(".kobo")) {
+                      _showKoboWarning(file);
+                    } else {
+                      _tryLoad(file);
                     }
                   } catch (e) {
                     if (context.mounted) {
