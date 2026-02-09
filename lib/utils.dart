@@ -1,5 +1,29 @@
 import 'package:flutter/material.dart';
 
+class GithubJSONResponse {
+  final String url;
+  final String tagName;
+  final String body;
+
+  const GithubJSONResponse({
+    required this.url,
+    required this.tagName,
+    required this.body,
+  });
+
+  factory GithubJSONResponse.fromJson(Map<String, dynamic> json) {
+    return switch (json) {
+      {
+        'body': String body,
+        'html_url': String htmlurl,
+        'tag_name': String tagName,
+      } =>
+        GithubJSONResponse(url: htmlurl, tagName: tagName, body: body),
+      _ => throw const FormatException("Parse error"),
+    };
+  }
+}
+
 Future<void> errorDialog(BuildContext context, String title, String text) {
   return showDialog(
     context: context,

@@ -1,13 +1,22 @@
 # Kobo Highlights
 A Flutter aplication to view, organize and export highlights created on a Kobo eReader. Parsing a `KoboReader.sqlite` database, it displays any saved highlights on a user-friendly interface which allows users to read their saved fragments and export them either individually or in batches. It also supports exporting highlights as images, for ease of sharing on social media.
 
-Note that this application has only been tested with a database obtained from a Kobo Aura H2O Edition 2. While it should be compatible with other models that use the same database structure, perfect compatibility cannot be guaranteed. In case of errors, pull requests offering solutions are very welcome (see [Contributing](#contributing)).
+## Compatible devices
+This application has only been tested with a database obtained from the following Kobo eReader models:
+* Kobo Aura H2O Edition 2
+* Kobo Libra Colour
+
+While it should be compatible with other models that use the same database structure, perfect compatibility cannot be guaranteed. In case of errors, pull requests offering solutions are very welcome (see [Contributing](#contributing)).
+
+In any case, to prevent any possible issues (in case of incompatibility, a faulty connection, a accidentaly disconnected device, etc) we heavily recommend making a copy of the database file to your computer and loading this copy instead of loading directly from the device.
 
 ## Installation
+You can find the latest version of the software on the [Releases](https://github.com/EstebanAtHisComputer/KoboHighlightsFlutter/releases) page.
 ### Windows
 No installation is required. Unzip the compressed folder in your prefered location and run the .exe file.
 ### Linux
 No installation is required. You can directly execute the `.appimage` file to launch the application.
+A Flatpak version is on the works.
 ### MacOS / Mobile / Web / Others
 The project has not been tested to work on any platforms other than Windows and Linux and correct functionality can't be confirmed at this time in any other platform. Issues and pull requests oriented to document and fix functionality on those platforms would be greatly appreciated.
 
@@ -46,12 +55,17 @@ We also support packaging the application into an AppImage,using [FastForge](htt
 * Your `.appimage` file will be built on the `dist` folder.
 
 ## Usage
-### The main screen
+### The intro screen
 ![Intro screen of the app](docs/screenshot_intro.png)
 
-Upon loading the application, click the "Open" button to select your `KoboReader.sqlite` file. It should be situated on the `.kobo` hidden folder of your eReader, but the location may vary depending on the specific model of your eReader and the configuration of your operating system. If you can't locate this file, please search online for the specific path appropiate to your use case.
+Upon loading the application, click the "Open" button to select your `KoboReader.sqlite` file. It should be situated on the `.kobo` hidden folder of your eReader, but the location may vary depending on the specific model of your eReader and the configuration of your 
+operating system. If you can't locate this file, please search online for the specific path appropiate to your use case.
 
-To prevent any possible issues (in case of a fauly connection, a accidentaly disconnected device, etc) we heavily recommend making a copy of this file to your computer and loading this copy instead of loading directly from the device.
+To prevent any possible issues (in case of a faulty connection, a accidentaly disconnected device, etc) we heavily recommend making a copy of this file to your computer and loading this copy instead of loading directly from the device.
+
+The left bottom corner of the screen will display the current version of the app and a notice if there are any updates available. Clicking this notification will let you read the changelog and open the Releases page on your browser, allowing you to quickly download the latest version.
+
+### The main screen
 ![Sidebar of the app, showing a list of books](docs/screenshot_sidebar.png)
 If the database has been loaded correctly, the main interface will show up and the sidebar will automatically open. This sidebar will display every book that has at least one highlight stored on your device. You can scroll up and down the list with the mouse wheel or by using the scroll bar. If you close the sidebar by mistake (by clicking outside of it), you can reopen it by clicking on the `Open book list` (![Book list icon](docs/menu-book.png)) icon.
 ![The app, with a book loaded.](docs/screenshot_body.png)

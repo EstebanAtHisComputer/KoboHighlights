@@ -114,28 +114,31 @@ class _ExportImageBodyState extends State<ExportImageBody> {
             ),
           ],
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          spacing: 12.0,
-          children: [
-            FilledButton(
-              onPressed: () {
-                _captureAndSave(context);
-              },
-              child: Text("Save"),
-            ),
-            FilledButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              style: ButtonStyle(
-                backgroundColor: WidgetStatePropertyAll(
-                  ColorScheme.of(context).secondary,
-                ),
+        Padding(
+          padding: EdgeInsetsGeometry.directional(end: 15),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            spacing: 12.0,
+            children: [
+              FilledButton(
+                onPressed: () {
+                  _captureAndSave(context);
+                },
+                child: Text("Save"),
               ),
-              child: Text("Close"),
-            ),
-          ],
+              FilledButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                style: ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(
+                    ColorScheme.of(context).secondary,
+                  ),
+                ),
+                child: Text("Close"),
+              ),
+            ],
+          ),
         ),
       ],
     );
