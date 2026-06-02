@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+    <id>io.github.estebanathiscomputer.KoboHighlights</id>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>MIT</project_license>
+    <name>Kobo Highlights</name>
+    <summary> Flutter app to parse, display, and work with highlights made on a Kobo ebook reader. </summary>
+    <description>
+        <p>A Flutter aplication to view, organize and export highlights created on a Kobo eReader. Parsing a KoboReader.sqlite database, it displays any saved highlights on a user-friendly interface which allows users to read their saved fragments and export them either individually or in batches. It also supports exporting highlights as images, for ease of sharing on social media.</p>
+    </description>
+    <launchable type="desktop-id">io.github.estebanathiscomputer.KoboHighlights.desktop</launchable>
+    <url type="homepage">https://github.com/EstebanAtHisComputer/KoboHighlightsFlutter</url>
+</component>

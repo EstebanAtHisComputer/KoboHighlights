@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Kobo Highlights
+Comment=A Flutter aplication to view, organize and export highlights created on a Kobo eReader.
+Exec=kobo_highlights
+Icon=io.github.estebanathiscomputer.KoboHighlights
+Terminal=false
+Categories=Utility;
