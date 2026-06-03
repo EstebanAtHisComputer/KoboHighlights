@@ -1,13 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
     <id>io.github.estebanathiscomputer.KoboHighlights</id>
-    <metadata_license>CC0-1.0</metadata_license>
-    <project_license>MIT</project_license>
+
     <name>Kobo Highlights</name>
-    <summary> Flutter app to parse, display, and work with highlights made on a Kobo ebook reader. </summary>
+    <summary>Flutter app to parse, display, and work with highlights made on a Kobo ebook reader</summary>
+
+    <metadata_license>MIT</metadata_license>
+    <project_license>MIT</project_license>
+    <content_rating type="oars-1.1" />
+
     <description>
-        <p>A Flutter aplication to view, organize and export highlights created on a Kobo eReader. Parsing a KoboReader.sqlite database, it displays any saved highlights on a user-friendly interface which allows users to read their saved fragments and export them either individually or in batches. It also supports exporting highlights as images, for ease of sharing on social media.</p>
+        <p>
+            A Flutter aplication to view, organize and export highlights created on a Kobo eReader. Parsing a KoboReader.sqlite database, it displays any saved highlights on a user-friendly interface which allows users to read their saved fragments and export them either individually or in batches. It also supports exporting highlights as images, for ease of sharing on social media.
+        </p>
     </description>
-    <launchable type="desktop-id">io.github.estebanathiscomputer.KoboHighlights.desktop</launchable>
+
     <url type="homepage">https://github.com/EstebanAtHisComputer/KoboHighlightsFlutter</url>
+    <url type="contribute">https://github.com/EstebanAtHisComputer/KoboHighlightsFlutter/blob/main/CONTRIBUTING.md</url>
+
+    <developer id="dev.pages.estebanndev">
+        <name>Esteban N.</name>
+    </developer>
+
+    <releases>
+        <release version="1.0.1" date="2026-02-09">
+            <url type="details">https://github.com/EstebanAtHisComputer/KoboHighlightsFlutter/releases/tag/1.0.1</url>
+            <description>
+                <ul>
+                    <li>feat: Display version number on the intro page</li>
+                    <li>feat: Fetch latest release from Github</li>
+                    <li>feat: Display window with update details and a quick link to github's releases page.</li>
+                    <li>feat: Sanity check: display warning if .kobo folder detected on the database path.</li>
+                    <li>fix: Added padding to export image dialog.</li>
+                    <li>feat: Change version to 1.0.1</li>
+                </ul>
+            </description>
+        </release>
+        <release version="1.0.0" date="2026-01-05">
+            <url type="details">https://github.com/EstebanAtHisComputer/KoboHighlightsFlutter/releases/tag/1.0.0</url>
+            <description>
+                <p>Initial release of the application. Windows and Linux executable files are attached to this release. Instructions to build the project from source can be found on the README.md file. Please open issues and submit pull requests in case of something not working properly.</p>
+            </description>
+        </release>
+    </releases>
+
+
+    <launchable type="desktop-id">io.github.estebanathiscomputer.KoboHighlights.desktop</launchable>
+    <screenshots>
+        <screenshot type="default">
+            <image>https://raw.githubusercontent.com/EstebanAtHisComputer/KoboHighlightsFlutter/4f10c195a9baeca73ad242b130229ce5981678f9/docs/screenshot_intro.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://raw.githubusercontent.com/EstebanAtHisComputer/KoboHighlightsFlutter/4f10c195a9baeca73ad242b130229ce5981678f9/docs/screenshot_sidebar.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://raw.githubusercontent.com/EstebanAtHisComputer/KoboHighlightsFlutter/4f10c195a9baeca73ad242b130229ce5981678f9/docs/screenshot_body.png</image>
+        </screenshot>
+    </screenshots>
 </component>

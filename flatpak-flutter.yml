@@ -1,0 +1,46 @@
+app-id: io.github.estebanathiscomputer.KoboHighlights
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.llvm19
+command: kobo_highlights
+finish-args:
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+  - --filesystem=host 
+
+modules:
+  - name: KoboHighlights
+    buildsystem: simple
+    build-options:
+        arch:
+          x86_64:
+            env:
+              BUNDLE_PATH: build/linux/x64/release/bundle
+          aarch64:
+            env:
+              BUNDLE_PATH: build/linux/arm64/release/bundle
+        append-path: /usr/lib/sdk/llvm19/bin:/var/lib/flutter/bin
+        prepend-ld-library-path: /usr/lib/sdk/llvm19/lib
+        env:
+            PUB_CACHE: /run/build/KoboHighlights/.pub-cache
+    build-commands:
+      - flutter build linux --release --no-pub
+
+      - mkdir -p /app/bin
+      - cp -r "$BUNDLE_PATH"/* /app/bin/
+
+      - install -Dm644 flatpak_assets/io.github.estebanathiscomputer.KoboHighlights.desktop /app/share/applications/io.github.estebanathiscomputer.KoboHighlights.desktop
+      - install -Dm644 flatpak_assets/io.github.estebanathiscomputer.KoboHighlights.metainfo.xml /app/share/metainfo/io.github.estebanathiscomputer.KoboHighlights.metainfo.xml
+      - install -Dm644 flatpak_assets/io.github.estebanathiscomputer.KoboHighlights.png /app/share/icons/hicolor/256x256/apps/io.github.estebanathiscomputer.KoboHighlights.png
+
+    sources:
+      - type: git
+        url: https://github.com/EstebanAtHisComputer/KoboHighlightsFlutter.git
+        tag: 1.0.1
+      - type: git
+        url: https://github.com/flutter/flutter.git
+        tag: 3.38.9
+        dest: flutter
