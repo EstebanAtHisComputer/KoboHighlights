@@ -1,6 +1,6 @@
 app-id: io.github.estebanathiscomputer.KoboHighlights
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.llvm19
@@ -8,8 +8,9 @@ command: kobo_highlights
 finish-args:
   - --socket=wayland
   - --socket=fallback-x11
+  - --share=ipc
   - --device=dri
-  - --filesystem=host 
+ # - --filesystem=host 
 
 modules:
   - name: KoboHighlights
@@ -38,7 +39,7 @@ modules:
 
     sources:
       - type: git
-        url: https://github.com/EstebanAtHisComputer/KoboHighlightsFlutter.git
+        url: https://github.com/EstebanAtHisComputer/KoboHighlights.git
         tag: 1.0.1
       - type: git
         url: https://github.com/flutter/flutter.git

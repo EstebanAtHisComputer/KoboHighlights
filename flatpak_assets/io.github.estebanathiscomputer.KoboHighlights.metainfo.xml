@@ -15,8 +15,8 @@
         </p>
     </description>
 
-    <url type="homepage">https://github.com/EstebanAtHisComputer/KoboHighlightsFlutter</url>
-    <url type="contribute">https://github.com/EstebanAtHisComputer/KoboHighlightsFlutter/blob/main/CONTRIBUTING.md</url>
+    <url type="homepage">https://github.com/EstebanAtHisComputer/KoboHighlights</url>
+    <url type="contribute">https://github.com/EstebanAtHisComputer/KoboHighlights/blob/main/CONTRIBUTING.md</url>
 
     <developer id="dev.pages.estebanndev">
         <name>Esteban N.</name>
@@ -24,7 +24,7 @@
 
     <releases>
         <release version="1.0.1" date="2026-02-09">
-            <url type="details">https://github.com/EstebanAtHisComputer/KoboHighlightsFlutter/releases/tag/1.0.1</url>
+            <url type="details">https://github.com/EstebanAtHisComputer/KoboHighlights/releases/tag/1.0.1</url>
             <description>
                 <ul>
                     <li>feat: Display version number on the intro page</li>
@@ -37,7 +37,7 @@
             </description>
         </release>
         <release version="1.0.0" date="2026-01-05">
-            <url type="details">https://github.com/EstebanAtHisComputer/KoboHighlightsFlutter/releases/tag/1.0.0</url>
+            <url type="details">https://github.com/EstebanAtHisComputer/KoboHighlights/releases/tag/1.0.0</url>
             <description>
                 <p>Initial release of the application. Windows and Linux executable files are attached to this release. Instructions to build the project from source can be found on the README.md file. Please open issues and submit pull requests in case of something not working properly.</p>
             </description>
@@ -48,13 +48,13 @@
     <launchable type="desktop-id">io.github.estebanathiscomputer.KoboHighlights.desktop</launchable>
     <screenshots>
         <screenshot type="default">
-            <image>https://raw.githubusercontent.com/EstebanAtHisComputer/KoboHighlightsFlutter/4f10c195a9baeca73ad242b130229ce5981678f9/docs/screenshot_intro.png</image>
+            <image>https://raw.githubusercontent.com/EstebanAtHisComputer/KoboHighlights/4f10c195a9baeca73ad242b130229ce5981678f9/docs/screenshot_intro.png</image>
         </screenshot>
         <screenshot>
-            <image>https://raw.githubusercontent.com/EstebanAtHisComputer/KoboHighlightsFlutter/4f10c195a9baeca73ad242b130229ce5981678f9/docs/screenshot_sidebar.png</image>
+            <image>https://raw.githubusercontent.com/EstebanAtHisComputer/KoboHighlights/4f10c195a9baeca73ad242b130229ce5981678f9/docs/screenshot_sidebar.png</image>
         </screenshot>
         <screenshot>
-            <image>https://raw.githubusercontent.com/EstebanAtHisComputer/KoboHighlightsFlutter/4f10c195a9baeca73ad242b130229ce5981678f9/docs/screenshot_body.png</image>
+            <image>https://raw.githubusercontent.com/EstebanAtHisComputer/KoboHighlights/4f10c195a9baeca73ad242b130229ce5981678f9/docs/screenshot_body.png</image>
         </screenshot>
     </screenshots>
 </component>

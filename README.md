@@ -11,7 +11,7 @@ While it should be compatible with other models that use the same database struc
 In any case, to prevent any possible issues (in case of incompatibility, a faulty connection, a accidentaly disconnected device, etc) we heavily recommend making a copy of the database file to your computer and loading this copy instead of loading directly from the device.
 
 ## Installation
-You can find the latest version of the software on the [Releases](https://github.com/EstebanAtHisComputer/KoboHighlightsFlutter/releases) page.
+You can find the latest version of the software on the [Releases](https://github.com/EstebanAtHisComputer/KoboHighlights/releases) page.
 ### Windows
 No installation is required. Unzip the compressed folder in your prefered location and run the .exe file.
 ### Linux
@@ -25,7 +25,7 @@ The project has not been tested to work on any platforms other than Windows and 
 
 * Clone the repo
    ```sh
-   git clone https://github.com/EstebanAtHisComputer/KoboHighlightsFlutter
+   git clone https://github.com/EstebanAtHisComputer/KoboHighlights
    ```
 * Install and update dependencies
     ```sh
@@ -96,12 +96,12 @@ The simpler one, `Copy to clipboard`, does exactly that: it will copy the highli
 The last option, `Export as image`, allows you to generate an image containing the text so you can upload it to social media or other visually-centered places. You can choose the text size and if you wish to include the book title and author or not. Once you're happy with the result, click the `Save` button to generate a `.png` file with your highlight.
 
 ## Contributing
-This project welcomes pull requests. Contribution guidelines and instructions can be found on [`CONTRIBUTING.md`](https://github.com/EstebanAtHisComputer/KoboHighlightsFlutter/blob/main/CONTRIBUTING.md).
+This project welcomes pull requests. Contribution guidelines and instructions can be found on [`CONTRIBUTING.md`](https://github.com/EstebanAtHisComputer/KoboHighlights/blob/main/CONTRIBUTING.md).
 
 Note that the project does not accept pull requests seeking to add AI-powered features to the application and pull requests with AI-generated code are heavily discouraged.
 
 ## License Disclaimer
-This project is licensed under a MIT license. You can read more about it on the [`LICENSE.md`](https://github.com/EstebanAtHisComputer/KoboHighlightsFlutter/blob/main/LICENSE.md) file.
+This project is licensed under a MIT license. You can read more about it on the [`LICENSE.md`](https://github.com/EstebanAtHisComputer/KoboHighlights/blob/main/LICENSE.md) file.
 
 KOBO is a registered trademark owned by RAKUTEN KOBO INC., a TORONTO, ONTARIO based entity.
 This software is not affiliated, associated, authorized, or endorsed in any way by RAKUTEN KOBO INC.
